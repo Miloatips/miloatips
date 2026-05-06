@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miloatips | Flawless Nails That Last</title>
+    <meta name="description" content="Premium nail salon offering gel manicures, acrylics, and custom nail art. Book your appointment at Miloatips today!">
+    
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blush: '#FDF8F5',
+                        nude: '#EADDD7',
+                        dark: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            const hiddenImages = document.querySelectorAll('.additional-images');
+
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function() {
+                    hiddenImages.forEach(img => {
+                        img.classList.remove('hidden');
+                        img.classList.add('fade-in'); 
+                    });
+                    loadMoreBtn.style.display = 'none'; 
+                });
+            }
+        });
+    </script>
+
+    <style>
+        .fade-in { animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(10px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="font-body text-dark bg-blush antialiased relative pb-16 md:pb-0">
+
+    <!-- Sticky Mobile Booking Button -->
+    <div class="fixed bottom-0 left-0 w-full z-50 p-3 bg-white/90 backdrop-blur border-t border-nude md:hidden shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+        <a href="#booking" class="block w-full py-3 bg-dark text-white text-center font-semibold rounded-full shadow-lg active:scale-95 transition-transform">
+            Book Appointment Now
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 w-full py-4 px-6 md:px-12 flex justify-between items-center z-50 bg-white/80 backdrop-blur-md border-b border-nude/50">
+        <div class="text-2xl font-heading font-bold tracking-tight">Miloatips.</div>
+        <div class="hidden md:flex gap-6 items-center font-medium">
+            <a href="#services" class="hover:text-nude transition">Services</a>
+            <a href="#gallery" class="hover:text-nude transition">Gallery</a>
+            <a href="#booking" class="px-6 py-2 bg-dark text-white rounded-full hover:bg-black transition shadow-md">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 md:px-12 flex flex-col md:flex-row items-center gap-12 max-w-7xl mx-auto fade-in">
+        <div class="w-full md:w-1/2 space-y-6 z-10">
+            <span class="uppercase tracking-widest text-sm font-semibold text-gray-500">Premium Nail Artistry</span>
+            <h1 class="text-5xl md:text-7xl font-heading leading-tight font-semibold">Flawless Nails <br><span class="italic text-gray-700">That Last.</span></h1>
+            <p class="text-lg text-gray-600 max-w-md">Premium quality Press-On Nails handcrafted to perfection. Treat yourself to the ultimate Miloatips experience today.</p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                <a href="#booking" class="px-8 py-4 bg-dark text-white text-center rounded-full font-medium hover:bg-black transition shadow-lg">Book Appointment</a>
+                <a href="#gallery" class="px-8 py-4 border border-dark text-dark text-center rounded-full font-medium hover:bg-dark hover:text-white transition">View Designs</a>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 relative">
+            <div class="absolute inset-0 bg-nude rounded-tl-[100px] rounded-br-[100px] transform translate-x-4 translate-y-4 -z-10"></div>
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop" alt="Manicure" class="w-full h-[400px] md:h-[550px] object-cover rounded-tl-[100px] rounded-br-[100px] shadow-xl">
+        </div>
+    </section>
+
+    <!-- Services -->
+<section id="services" class="py-20 px-6 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+        <h2 class="text-4xl font-heading font-semibold mb-4">Our Services</h2>
+        <p class="text-gray-600">Tailored care for every style.</p>
+    </div>
+    
+    <!-- ADD THIS WRAPPER DIV BELOW -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Press-On Nails -->
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-nude hover:shadow-md transition">
+            <h3 class="text-xl font-semibold mb-2">Press-On Nails</h3>
+            <p class="text-gray-500 text-sm mb-6">Flawless length, strength, and shape tailored to your style.</p>
+            <div class="flex justify-between items-center">
+                <span class="font-medium text-gray-400 text-sm">From ₱800</span>
+                <a href="#booking" class="text-dark font-semibold text-sm underline hover:text-gray-600">Book</a>
+            </div>
+        </div>
+
+        <!-- Nail Art -->
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-nude hover:shadow-md transition">
+            <h3 class="text-xl font-semibold mb-2">Nail Art</h3>
+            <p class="text-gray-500 text-sm mb-6">From minimal French tips to intricate trendy 3D designs.</p>
+            <div class="flex justify-between items-center">
+                <span class="font-medium text-gray-400 text-sm">Custom</span>
+                <a href="#booking" class="text-dark font-semibold text-sm underline hover:text-gray-600">Book</a>
+            </div>
+        </div>
+
+        <!-- Nail Extension -->
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-nude opacity-80 flex flex-col h-full">
+    <h3 class="text-xl font-semibold mb-2">Nail Extension</h3>
+    <p class="text-gray-500 text-sm mb-6">Durable, stylish and clean polished look</p>
+    
+    <!-- This empty div pushes everything below it to the bottom -->
+    <div class="mt-auto flex justify-between items-center pt-6">
+        <span class="font-medium text-gray-300 text-sm"></span>
+        <span class="text-black-400 font-semibold text-sm italic">Coming Soon</span>
+    </div>
+</div>
+
+    </div> <!-- END OF WRAPPER DIV -->
+</section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-12">
+                <h2 class="text-4xl font-heading font-semibold mb-4">Our Masterpieces</h2>
+                <p class="text-gray-600 max-w-md">Browse our latest trend-setting designs and find inspiration.</p>
+            </div>
+
+            <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-3xl h-[300px] md:h-auto">
+                    <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=800" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Nail Art">
+                </div>
+                <div class="relative group overflow-hidden rounded-3xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=400" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Nail Art">
+                </div>
+                <div class="relative group overflow-hidden rounded-3xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=400" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" alt="Nail Art">
+                </div>
+                <div class="hidden additional-images relative group overflow-hidden rounded-3xl aspect-square">
+                    <img src="https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?q=80&w=400" class="w-full h-full object-cover" alt="Nail Art">
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <button id="load-more-btn" class="px-10 py-4 border border-dark text-dark rounded-full font-medium hover:bg-dark hover:text-white transition">
+                    Load More Designs
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking" class="py-20 px-6 max-w-4xl mx-auto">
+        <div class="bg-white p-8 md:p-12 rounded-[40px] shadow-xl border border-nude">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-heading font-semibold mb-2">Book Your Session</h2>
+                <p class="text-gray-500">Fast, easy, and secure via Messenger.</p>
+            </div>
+            <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Choose Service</label>
+                        <select id="service-select" class="w-full p-4 bg-blush rounded-xl border border-nude focus:outline-none focus:border-dark">
+                            <option>Press-On Nails</option>
+                            <option>Custom Nail Art</option>
+                            <option>Nail Extension</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Preferred Date</label>
+                        <input id="date-input" type="date" class="w-full p-4 bg-blush rounded-xl border border-nude focus:outline-none focus:border-dark">
+                    </div>
+                </div>
+                <button type="button" onclick="openMessenger()" class="w-full py-4 bg-dark text-white rounded-xl font-semibold hover:bg-black transition shadow-md">
+                    Confirm Appointment
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 px-6 border-t border-nude">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+            
+            <!-- Column 1: Brand -->
+            <div>
+                <h3 class="text-2xl font-heading font-bold mb-4">Miloatips.</h3>
+                <p class="text-gray-500 text-sm">Nailed it, every time. Premium care and trend-setting designs.</p>
+            </div>
+
+            <!-- Column 2: Location -->
+            <div>
+                <h4 class="font-semibold mb-4">Location</h4>
+                <p class="text-gray-500 text-sm">873 J.P Rizal St. Concepcion Uno, Marikina City</p>
+            </div>
+
+            <!-- Column 3: Social -->
+            <div>
+    <h4 class="font-semibold mb-4">Socials</h4>
+    <div class="inline-flex flex-col items-start gap-[2px] text-left">
+        
+        <a href="https://instagram.com/miloatips" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-gray-500 hover:text-[#E4405F] transition py-1">
+            <div class="w-8 h-8 flex items-center justify-center bg-blush rounded-lg group-hover:bg-[#FDF0F3] transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </div>
+            <span class="text-sm font-medium">@miloatips</span>
+        </a>
+
+        <a href="https://facebook.com/100093921881493" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-gray-500 hover:text-[#1877F2] transition py-1">
+            <div class="w-8 h-8 flex items-center justify-center bg-blush rounded-lg group-hover:bg-[#EEF4FF] transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="-ml-0.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </div>
+            <span class="text-sm font-medium">Miloatips</span>
+        </a>
+
+        <a href="https://tiktok.com/@Miloatips2" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-gray-500 hover:text-black transition py-1">
+            <div class="w-8 h-8 flex items-center justify-center bg-blush rounded-lg group-hover:bg-nude transition">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+            </div>
+            <span class="text-sm font-medium">@miloatips</span>
+        </a>
+    </div>
+</div>
+
+        <div class="text-center text-gray-400 text-sm mt-12">
+            &copy; 2026 Miloatips Nail Salon.
+        </div>
+    </footer>
+
+    <!-- Booking Script -->
+    <script>
+    function openMessenger() {
+        const service = document.getElementById('service-select').value;
+        const date = document.getElementById('date-input').value;
+        
+        // Using your Page ID
+        const pageUsername = "100093921881493"; 
+
+        if(!date) {
+            alert("Please select a date first!");
+            return;
+        }
+
+        // 1. Open the Messenger chat in a new window
+        window.open(`https://m.me/${pageUsername}`, '_blank');
+
+        // 2. Immediately redirect the current page to your success page
+        // Ensure the file is named exactly 'success.html' in your folder
+        window.location.href = "success.html";
+    }
+</script>
+
+</body>
+</html>
